@@ -1,6 +1,8 @@
 # relatos-consumidores
 Esse repositório guarda os códigos usados no projeto final de graduação "Modelagem e Construção de uma Base Pública de Relatos de Consumidores", que pode ser encontrado em: https://linktr.ee/biamsarmento
 
+Este trabalho aborda o desenvolvimento de uma base pública de dados estruturados a partir de relatos de consumidores extraídos do site Consumidor.gov.br. A motivação principal está na necessidade de fornecer acesso fácil e automatizado a dados públicos que, muitas vezes, são disponibilizados de forma desestruturada e de difícil manipulação, limitando sua utilização por pesquisadores e profissionais. Para superar esses desafios, foi empregada uma abordagem baseada em técnicas de web scraping, associada a metodologias de modelagem de banco de dados, processos ETL (Extração, Transformação e Carga), e análise de dados com machine learning.
+
 Os códigos estão separados da seguinte forma: 
 
 1) web_scraping.py é o código principal no qual inserimos as datas desejadas para extração.

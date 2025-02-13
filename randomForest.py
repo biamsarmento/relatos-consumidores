@@ -3,8 +3,11 @@ import json
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, balanced_accuracy_score
+from sklearn.metrics import accuracy_score, balanced_accuracy_score, confusion_matrix
 import time
+import seaborn as sns
+import matplotlib.pyplot as plt
+
 
 # Lista de stop words para português
 stop_words_pt = [
@@ -96,6 +99,17 @@ best_model = grid_search.best_estimator_
 y_pred = best_model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 balanced_accuracy = balanced_accuracy_score(y_test, y_pred)
+
+# Calcula a matriz de confusão
+cm = confusion_matrix(y_test, y_pred)
+
+# Cria um mapa de calor para visualização
+plt.figure(figsize=(8, 6))
+sns.heatmap(cm, annot=True, fmt="d", cmap="Blues", xticklabels=[1, 2, 3, 4, 5], yticklabels=[1, 2, 3, 4, 5])
+plt.xlabel("Previsto")
+plt.ylabel("Real")
+plt.title("Matriz de Confusão")
+plt.show()
 
 print(f'Acurácia do melhor modelo: {accuracy * 100:.2f}%')
 print(f'Acurácia balanceada do melhor modelo: {balanced_accuracy * 100:.2f}%')

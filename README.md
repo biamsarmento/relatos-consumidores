@@ -1,13 +1,57 @@
-# relatos-consumidores
-Esse repositório guarda os códigos usados no projeto final de graduação "Modelagem e Construção de uma Base Pública de Relatos de Consumidores", que pode ser encontrado em: https://linktr.ee/biamsarmento
+# 📝 Relatos Consumidores
 
-Este trabalho aborda o desenvolvimento de uma base pública de dados estruturados a partir de relatos de consumidores extraídos do site Consumidor.gov.br. A motivação principal está na necessidade de fornecer acesso fácil e automatizado a dados públicos que, muitas vezes, são disponibilizados de forma desestruturada e de difícil manipulação, limitando sua utilização por pesquisadores e profissionais. Para superar esses desafios, foi empregada uma abordagem baseada em técnicas de web scraping, associada a metodologias de modelagem de banco de dados, processos ETL (Extração, Transformação e Carga), e análise de dados com machine learning.
+## 📖 About the Project
 
-Os códigos estão separados da seguinte forma: 
+This repository contains the source code for the final graduation project, **"Modelagem e Construção de uma Base Pública de Relatos de Consumidores"**, which can be accessed here:  
+🔗 [Project Link](https://linktr.ee/biamsarmento)
 
-1) web_scraping.py é o código principal no qual inserimos as datas desejadas para extração.
-2) O código functions.py contem as funções utilizadas para a coleta de dados via web scrapping, utilizando BeautifulSoup.
-3) O código database.py salva os dados no banco MySQL, que deve ser previamente configurado.
-4) O código randomForest.py processa os dados da base, que devem ser salvos no formato JSON, e fornece algumas estatísticas. Ele tenta acertar a nota (de 1 a 5) que o usuário vai escolher para avaliar o atendimento, baseando-se no status e no comentário do relato. O algoritmo usado é o Random Forest.
+### Project Overview
 
-Espero que esses códigos possam ajudar pesquisadores e cientistas que desejam extrair dados públicos de forma eficiente e automática. :)
+This work focuses on developing a **public structured database** from consumer reports extracted from the **Consumidor.gov.br** website. The main motivation is to provide **easy and automated access to public data**, which is often available in an unstructured and hard-to-manage format, limiting its usability for researchers and professionals.
+
+To address these challenges, the project employs a **web scraping approach**, combined with:
+- **Database modeling methodologies**  
+- **ETL processes (Extraction, Transformation, and Loading)**  
+- **Data analysis with machine learning techniques**  
+
+## 📂 Project Structure
+
+The code is organized as follows:
+
+- **`web_scraping.py`** → Main script where the desired extraction dates are set.  
+- **`functions.py`** → Contains functions for web scraping using **BeautifulSoup**.  
+- **`database.py`** → Saves extracted data into a **MySQL database** (which must be preconfigured).  
+- **`randomForest.py`** → Processes the structured data (saved in JSON format) and provides basic statistics.  
+  - It attempts to **predict the rating (1 to 5)** that a user will give based on the **status and content of the report**, using the **Random Forest algorithm**.  
+
+## 🎯 Objective
+
+The goal of this project is to **facilitate public data extraction and structuring** to make consumer reports easily accessible and useful for researchers, analysts, and professionals. 
+
+## 🚀 Outcome
+
+This project enables **automated and structured extraction of consumer complaints**, making public data more accessible for analysis and research.
+
+## 🛠️ Technologies and Tools Used
+
+- **Python**
+  - BeautifulSoup (**Web Scraping**)
+  - Pandas (**Data Processing**)
+  - Scikit-Learn (**Machine Learning - Random Forest**)
+- **MySQL** (**Database Storage**)
+- **JSON** (**Data Formatting**)
+
+## 📚 What I Learned
+
+Through this project, I gained valuable experience in:
+- **Web Scraping techniques** with BeautifulSoup  
+- **ETL (Extract, Transform, Load) processes** for structuring public data  
+- **Database modeling and interaction** with MySQL  
+- **Machine Learning for data analysis and prediction**  
+
+## 🔧 How to Run the Project
+
+### 📦 Cloning the Repository
+```bash
+git clone https://github.com/biamsarmento/relatos-consumidores.git
+cd relatos-consumidores
